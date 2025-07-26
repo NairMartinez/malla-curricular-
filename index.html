@@ -1,1 +1,113 @@
-index.html
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Interactiva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="malla-container">
+        <h1>Malla Curricular</h1>
+
+        <div class="semestre">
+            <h2>Semestre I</h2>
+            <div class="ramo" id="anatomia1">Anatomía Humana I</div>
+            <div class="ramo" id="biologia_celular">Biología Celular</div>
+            <div class="ramo" id="botanica">Botánica</div>
+            <div class="ramo" id="quimica_inorganica">Química Inorgánica</div>
+            <div class="ramo" id="matematicas">Matemáticas</div>
+            <div class="ramo" id="metodologia">Metodología de la Investigación</div>
+            <div class="ramo" id="ingles1">Inglés Técnico I</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre II</h2>
+            <div class="ramo" id="fisiologia1" data-requisitos='["anatomia1"]'>Fisiología I</div>
+            <div class="ramo" id="bioquimica1" data-requisitos='["quimica_inorganica"]'>Bioquímica Aplicada I</div>
+            <div class="ramo" id="farmacognosia" data-requisitos='["botanica"]'>Farmacognosia</div>
+            <div class="ramo" id="quimica_organica" data-requisitos='["quimica_inorganica"]'>Química Orgánica</div>
+            <div class="ramo" id="fisica_salud">Física en Salud</div>
+            <div class="ramo" id="bioestadistica" data-requisitos='["matematicas"]'>Bioestadística e Investigación</div>
+            <div class="ramo" id="ingles2" data-requisitos='["ingles1"]'>Inglés Técnico II</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre III</h2>
+            <div class="ramo" id="fisiopatologia" data-requisitos='["fisiologia1"]'>Fisiopatología General</div>
+            <div class="ramo" id="bioquimica2" data-requisitos='["bioquimica1"]'>Bioquímica Aplicada II</div>
+            <div class="ramo" id="parasitologia" data-requisitos='["biologia_celular"]'>Parasitología</div>
+            <div class="ramo" id="quimica_analitica_cuali" data-requisitos='["quimica_organica"]'>Química Analítica Cualitativa</div>
+            <div class="ramo" id="quimica_farmaceutica" data-requisitos='["quimica_organica"]'>Química Farmacéutica</div>
+            <div class="ramo" id="ingles3" data-requisitos='["ingles2"]'>Inglés Técnico III</div>
+            <div class="ramo" id="proy_integrado1">Proyectos Integrado Humanistico I</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre IV</h2>
+            <div class="ramo" id="tecnologia_farmaceutica" data-requisitos='["quimica_farmaceutica"]'>Tecnología Farmacéutica</div>
+            <div class="ramo" id="enzimologia" data-requisitos='["bioquimica2"]'>Enzimología</div>
+            <div class="ramo" id="microbiologia_lab" data-requisitos='["parasitologia"]'>Microbiología y Técnicas de Laboratorio</div>
+            <div class="ramo" id="quimica_analitica_cuanti" data-requisitos='["quimica_analitica_cuali"]'>Química Analítica Cuantitativa</div>
+            <div class="ramo" id="farmacologia_general" data-requisitos='["fisiopatologia"]'>Farmacología General</div>
+            <div class="ramo" id="salud_publica">Salud Pública y Epidemiología</div>
+            <div class="ramo" id="ingles4" data-requisitos='["ingles3"]'>Inglés Técnico IV</div>
+            <div class="ramo" id="proy_integrado2" data-requisitos='["proy_integrado1"]'>Proyecto Integrado Humanistico II</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre V</h2>
+            <div class="ramo" id="farmacologia_aplicada" data-requisitos='["farmacologia_general"]'>Farmacología Aplicada</div>
+            <div class="ramo" id="biologia_molecular" data-requisitos='["enzimologia"]'>Biología Molecular y Genética</div>
+            <div class="ramo" id="fitofarmacia" data-requisitos='["farmacognosia"]'>Fitofarmacia</div>
+            <div class="ramo" id="farmacia_industrial" data-requisitos='["tecnologia_farmaceutica"]'>Farmacia Industrial</div>
+            <div class="ramo" id="bromatologia">Bromatología</div>
+            <div class="ramo" id="deontologia">Deontología y Legislación</div>
+            <div class="ramo" id="electiva1">Electiva I</div>
+            <div class="ramo" id="proy_integrado3" data-requisitos='["proy_integrado2"]'>Proyecto Integrado Humanístico III</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VI</h2>
+            <div class="ramo" id="toxicologia_general" data-requisitos='["farmacologia_aplicada"]'>Toxicología General</div>
+            <div class="ramo" id="bioquimica_clinica" data-requisitos='["biologia_molecular"]'>Bioquímica Clínica</div>
+            <div class="ramo" id="fisicoquimica">Fisicoquímica</div>
+            <div class="ramo" id="control_calidad" data-requisitos='["quimica_analitica_cuanti"]'>Control de Calidad</div>
+            <div class="ramo" id="microbiologia_industrial" data-requisitos='["microbiologia_lab"]'>Microbiología Industrial</div>
+            <div class="ramo" id="electiva2">Electiva II</div>
+            <div class="ramo" id="proy_integrado4" data-requisitos='["proy_integrado3"]'>Proyecto Integrado Humanístico IV</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VII</h2>
+            <div class="ramo" id="toxicologia_forense" data-requisitos='["toxicologia_general"]'>Toxicología Legal y Forense</div>
+            <div class="ramo" id="gestion_farmaceutica" data-requisitos='["farmacia_industrial"]'>Gestión Farmacéutica</div>
+            <div class="ramo" id="hematologia1">Hematología I</div>
+            <div class="ramo" id="inmunologia_general">Inmunología General</div>
+            <div class="ramo" id="analisis_diseno" data-requisitos='["bioestadistica"]'>Análisis y Diseño Experimental</div>
+            <div class="ramo" id="electiva3">Electiva III</div>
+            <div class="ramo" id="proy_integrado5" data-requisitos='["proy_integrado4"]'>Proyecto Integrado Humanístico V</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VIII</h2>
+            <div class="ramo" id="farmacia_clinica" data-requisitos='["gestion_farmaceutica"]'>Farmacia Clínica y Hospitalaria</div>
+            <div class="ramo" id="bioquimica_aplicada" data-requisitos='["bioquimica_clinica"]'>Bioquímica Aplicada</div>
+            <div class="ramo" id="hematologia2" data-requisitos='["hematologia1"]'>Hematología II</div>
+            <div class="ramo" id="inmunologia_clinica" data-requisitos='["inmunologia_general"]'>Inmunología Clínica y Virología</div>
+            <div class="ramo" id="gestion_bioquimica">Gestión Bioquímica e Industrial</div>
+            <div class="ramo" id="taller_investigacion" data-requisitos='["analisis_diseno"]'>Taller de Investigación</div>
+            <div class="ramo" id="proy_integrado6" data-requisitos='["proy_integrado5"]'>Proyecto Integrado Humanístico VI</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre IX</h2>
+            <div class="ramo internado" id="internado">INTERNADO ROTATORIO</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
